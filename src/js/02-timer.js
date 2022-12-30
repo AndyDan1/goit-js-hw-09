@@ -47,6 +47,8 @@ const onCountTime = () => {
 
 function addLeadingZero(values) {
   const newValues = { ...values };
+  console.log(newValues);
+  console.log(values);
   const keys = Object.keys(newValues);
   for (const key of keys) {
     newValues[key] = String(newValues[key]).padStart(2, 0);

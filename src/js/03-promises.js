@@ -26,7 +26,7 @@ function onFormSubmit(e) {
   let FIRST_DELAY = Number(firstDelay.value);
   const STEP_DELAY = Number(stepDelay.value);
 
-  for (let i = 0; i < amount.value; i++) {
+  for (let i = 1; i <= amount.value; i++) {
     createPromise(i, FIRST_DELAY)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
